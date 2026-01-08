@@ -21,7 +21,7 @@ const DailyTasks = () => {
 
   const fetchCategories = async () => {
     try {
-      const response = await fetch('`${API_BASE_URL}/api/tasks/categories', {
+      const response = await fetch(`${API_BASE_URL}/api/tasks/categories`, {
         headers: {
           'Authorization': `Bearer ${token}`
         }
@@ -35,7 +35,7 @@ const DailyTasks = () => {
 
   const fetchTodayTasks = async () => {
     try {
-      const response = await fetch('`${API_BASE_URL}/api/tasks/today', {
+      const response = await fetch(`${API_BASE_URL}/api/tasks/today`, {
         headers: {
           'Authorization': `Bearer ${token}`
         }
@@ -81,7 +81,7 @@ const DailyTasks = () => {
 
   const createDailyTasks = async () => {
     try {
-      const response = await fetch('`${API_BASE_URL}/api/tasks/create', {
+      const response = await fetch(`${API_BASE_URL}/api/tasks/create`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -136,7 +136,7 @@ const DailyTasks = () => {
   const addCustomTaskToDaily = async () => {
     if (customTask.trim()) {
       try {
-        const response = await fetch('`${API_BASE_URL}/api/tasks/custom', {
+        const response = await fetch(`${API_BASE_URL}/api/tasks/custom`, {
           method: 'POST',
           headers: {
             'Content-Type': 'application/json',
@@ -159,7 +159,7 @@ const DailyTasks = () => {
 
   const claimReward = async () => {
     try {
-      const response = await fetch('`${API_BASE_URL}/api/tasks/claim-reward', {
+      const response = await fetch(`${API_BASE_URL}/api/tasks/claim-reward`, {
         method: 'POST',
         headers: {
           'Authorization': `Bearer ${token}`

@@ -92,7 +92,7 @@ const ChatWindow = () => {
 
     try {
       const API_BASE_URL = import.meta.env.VITE_API_URL;
-      const response = await fetch('`${API_BASE_URL}/api/chat/send', {
+      const response = await fetch(`${API_BASE_URL}/api/chat/send`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
