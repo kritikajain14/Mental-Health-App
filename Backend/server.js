@@ -1,6 +1,7 @@
 import express from 'express';
 import mongoose from 'mongoose';
 import cors from 'cors';
+import rateLimit from 'express-rate-limit';
 import helmet from 'helmet';
 import { createServer } from 'http';
 import { Server } from 'socket.io';
@@ -10,6 +11,7 @@ import authRoutes from './routes/auth.js';
 import chatRoutes from './routes/chat.js';
 import taskRoutes from './routes/tasks.js';
 import { authenticateSocket } from './middleware/auth.js';
+import path from 'path';
 
 dotenv.config({ path: './config/config.env' });
 
