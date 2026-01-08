@@ -28,7 +28,9 @@ const AuthForm = ({ isLogin }) => {
 
     try {
       const endpoint = isLogin ? '/api/auth/login' : '/api/auth/register'
-      const response = await fetch(`http://localhost:5173${endpoint}`, {
+      const API_BASE_URL = import.meta.env.VITE_API_URL;
+
+      const response = await fetch(`${API_BASE_URL}${endpoint}`, {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json'

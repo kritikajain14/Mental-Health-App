@@ -39,7 +39,8 @@ export const AuthProvider = ({ children }) => {
 
   const fetchProfile = async (authToken = token) => {
     try {
-      const response = await fetch('http://localhost:3000/api/chat/profile', {
+      const API_BASE_URL = import.meta.env.VITE_API_URL;
+      const response = await fetch('`${API_BASE_URL}/api/chat/profile', {
         method: 'GET',
         headers: {
           'Authorization': `Bearer ${authToken}`,
